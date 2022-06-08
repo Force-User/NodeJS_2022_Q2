@@ -1,18 +1,25 @@
 import process, { stdin, exit, argv } from "process";
-import { checkParams, checkUserName, printMessage } from "./utils/services.js";
-import { ACTIONS, FLAGS } from "./utils/constants.js";
-import { upToDirectory } from "./utils/services/up_to_directory.service.js";
+import {
+  checkParams,
+  checkUserName,
+  printErrorMessage,
+  printMessage,
+  setDir,
+} from "./utils/services.js";
+import { ACTIONS, ERORR_TYPES, FLAGS } from "./utils/constants.js";
 import { showList } from "./utils/services/list.service.js";
 import { addFile } from "./utils/services/addFile.service.js";
 import { readFileService } from "./utils/services/readFile.service.js";
-import { changeDirService } from "./utils/services/changeDir.service.js";
 import { renameFileService } from "./utils/services/renameFile.service.js";
 import { copyFileService } from "./utils/services/copyFile.service.js";
 import { moveFileService } from "./utils/services/moveFile.service.js";
+import { upToDirectory } from "./modules/up_to_directory.module.js";
+import { changeDirService } from "./modules/change_dir.module.js";
 
 const args = argv.slice(2);
 const [currentFlag, username] = checkParams(args);
 checkUserName(currentFlag, username);
+setDir();
 
 stdin.on("data", (data) => {
   const [flag, option1, option2] = data.toString().trim().split(" ");
@@ -67,6 +74,9 @@ stdin.on("data", (data) => {
       break;
 
     case FLAGS.DECOMPRESS:
+      break;
+    default:
+      printErrorMessage(ERORR_TYPES.INVALID_INPUT);
       break;
   }
 });
