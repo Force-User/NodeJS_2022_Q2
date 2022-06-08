@@ -8,7 +8,7 @@ import {
 } from "./utils/services.js";
 import { ACTIONS, ERORR_TYPES, FLAGS } from "./utils/constants.js";
 import { addFile } from "./utils/services/addFile.service.js";
-import { readFileService } from "./utils/services/readFile.service.js";
+import { readFileService } from "./modules/read_file.module.js";
 import { renameFileService } from "./utils/services/renameFile.service.js";
 import { copyFileService } from "./utils/services/copyFile.service.js";
 import { moveFileService } from "./utils/services/moveFile.service.js";
