@@ -7,7 +7,6 @@ import {
   setDir,
 } from "./utils/services.js";
 import { ACTIONS, ERORR_TYPES, FLAGS } from "./utils/constants.js";
-import { showList } from "./utils/services/list.service.js";
 import { addFile } from "./utils/services/addFile.service.js";
 import { readFileService } from "./utils/services/readFile.service.js";
 import { renameFileService } from "./utils/services/renameFile.service.js";
@@ -15,6 +14,7 @@ import { copyFileService } from "./utils/services/copyFile.service.js";
 import { moveFileService } from "./utils/services/moveFile.service.js";
 import { upToDirectory } from "./modules/up_to_directory.module.js";
 import { changeDirService } from "./modules/change_dir.module.js";
+import { showList } from "./modules/list.module.js";
 
 const args = argv.slice(2);
 const [currentFlag, username] = checkParams(args);
