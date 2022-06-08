@@ -9,7 +9,7 @@ import {
 import { ACTIONS, ERORR_TYPES, FLAGS } from "./utils/constants.js";
 import { addFile } from "./modules/add_file.module.js";
 import { readFileService } from "./modules/read_file.module.js";
-import { renameFileService } from "./utils/services/renameFile.service.js";
+import { renameFileService } from "./modules/rename_file.module.js";
 import { copyFileService } from "./utils/services/copyFile.service.js";
 import { moveFileService } from "./utils/services/moveFile.service.js";
 import { upToDirectory } from "./modules/up_to_directory.module.js";
