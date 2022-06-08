@@ -14,6 +14,7 @@ import { copyFileService } from "./modules/copy_file.module.js";
 import { upToDirectory } from "./modules/up_to_directory.module.js";
 import { changeDirService } from "./modules/change_dir.module.js";
 import { showList } from "./modules/list.module.js";
+import { removeFile } from "./modules/remove_file.module.js";
 
 const args = argv.slice(2);
 const [currentFlag, username] = checkParams(args);
@@ -61,6 +62,7 @@ stdin.on("data", (data) => {
       break;
 
     case FLAGS.RM:
+        removeFile(option1);
       break;
 
     case FLAGS.OS:
