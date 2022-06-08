@@ -7,7 +7,7 @@ import {
   setDir,
 } from "./utils/services.js";
 import { ACTIONS, ERORR_TYPES, FLAGS } from "./utils/constants.js";
-import { addFile } from "./utils/services/addFile.service.js";
+import { addFile } from "./modules/add_file.module.js";
 import { readFileService } from "./modules/read_file.module.js";
 import { renameFileService } from "./utils/services/renameFile.service.js";
 import { copyFileService } from "./utils/services/copyFile.service.js";
