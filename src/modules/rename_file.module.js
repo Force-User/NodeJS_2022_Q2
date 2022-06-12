@@ -13,6 +13,4 @@ export const renameFileService = async(pathName, newFileName) => {
     catch(e){
         printErrorMessage(ERORR_TYPES.OPERATION_FAILED, e.message)
     }
-
-
 }
