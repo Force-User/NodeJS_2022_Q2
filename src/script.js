@@ -19,6 +19,7 @@ import { osOperations } from "./modules/os.module.js";
 import { calculateHash } from "./modules/hash.module.js";
 import { compressModule } from "./modules/compress.module.js";
 import { decompressModule } from "./modules/decompress.module.js";
+import { moveFileService } from "./modules/move_file.module.js";
 
 const args = argv.slice(2);
 const [currentFlag, username] = checkParams(args);
