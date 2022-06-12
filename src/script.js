@@ -15,6 +15,10 @@ import { upToDirectory } from "./modules/up_to_directory.module.js";
 import { changeDirService } from "./modules/change_dir.module.js";
 import { showList } from "./modules/list.module.js";
 import { removeFile } from "./modules/remove_file.module.js";
+import { osOperations } from "./modules/os.module.js";
+import { calculateHash } from "./modules/hash.module.js";
+import { compressModule } from "./modules/compress.module.js";
+import { decompressModule } from "./modules/decompress.module.js";
 
 const args = argv.slice(2);
 const [currentFlag, username] = checkParams(args);
@@ -62,19 +66,23 @@ stdin.on("data", (data) => {
       break;
 
     case FLAGS.RM:
-        removeFile(option1);
+      removeFile(option1);
       break;
 
     case FLAGS.OS:
+      osOperations(option1);
       break;
 
     case FLAGS.HASH:
+      calculateHash(option1);
       break;
 
     case FLAGS.COMPRESS:
+      compressModule(option1, option2);
       break;
 
     case FLAGS.DECOMPRESS:
+      decompressModule(option1, option2);
       break;
     default:
       printErrorMessage(ERORR_TYPES.INVALID_INPUT);
