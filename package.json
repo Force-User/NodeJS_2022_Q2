@@ -1,0 +1,21 @@
+{
+  "name": "nodejs_2022_q2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThisIsAntony/NodeJS_2022_Q2.git"
+  },
+  "author": "Anatol_Yakushenka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThisIsAntony/NodeJS_2022_Q2/issues"
+  },
+  "homepage": "https://github.com/ThisIsAntony/NodeJS_2022_Q2#readme"
+}
